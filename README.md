@@ -6,7 +6,7 @@ Zadania rekrutacyjne 1 i 2
 
 input:
 
-domino = Dominos('\\\|||//|/\\|/')
+domino = Dominos(r'\\\|||//|/\\|/')
 domino.next_iteraton()
 domino.previous_iteration()
 print(domino.dominos)
