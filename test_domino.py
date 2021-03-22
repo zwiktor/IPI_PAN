@@ -1,28 +1,26 @@
 import unittest
 from domino import Domino
 
-class TestDominoInstance(unittest.TestCase):
 
-
+class TestDomino(unittest.TestCase):
 
     def setUp(self):
-        self.dominos = Domino(r'||//||\||/\|')
+        self.dominoes = Domino(r'||//||\||/\|')
 
-
-    def test_domino_atribute(self):
-        self.assertTrue(hasattr(self.dominos, 'dominos'))
-        self.assertEqual(self.dominos.dominos, r'||//||\||/\|')
-        for dom in self.dominos.dominos:
+    def test_domino_attribute(self):
+        self.assertTrue(hasattr(self.dominoes, 'dominoes'))
+        self.assertEqual(self.dominoes.dominoes, r'||//||\||/\|')
+        for dom in self.dominoes.dominoes:
             self.assertIn(dom, ['\\', '|', '/'])
 
-    def test_domino_next_iteral(self):
-        self.dominos.next_iteral()
-        self.assertEqual(self.dominos.dominos, r'||///\\||/\|')
+    def test_domino_next_iteration(self):
+        self.dominoes.next_position_of_dominoes()
+        self.assertEqual(self.dominoes.dominoes, r'||///\\||/\|')
 
-    def test_domino_previous_iteral(self):
-        self.dominos.previous_iteral()
-        self.assertEqual(self.dominos.dominos, r'||/|||\||/\|')
+    def test_domino_previous_iteration(self):
+        self.dominoes.previous_position_of_dominoes()
+        self.assertEqual(self.dominoes.dominoes, r'||/|||\||/\|')
 
 
 if __name__ == "__main__":
-     unittest.main()
+    unittest.main()
